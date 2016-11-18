@@ -1,0 +1,22 @@
+.reel {
+    border: 1px solid black;
+    width: 64px;
+    height: 64px;
+    float: left;
+}
+.reel-1 {
+    background: url('img/reel1/reel1.jpg') repeat-y;
+}
+.reel-2 {
+    background: url('img/reel1/reel1.jpg') repeat-y;
+}
+.reel-3 {
+    background: url('img/reel1/reel1.jpg') repeat-y;
+}
+.clear {
+    clear: both;
+}
+
+.result {
+    background-color: lightyellow;
+}
