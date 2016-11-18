@@ -61,7 +61,8 @@ function handleClick() {
     slotMachine.reset();
     slotMachine.start();
 
-    spinReel(slotMachine.declareWinner());
+    spinReel();
+    slotMachine.declareWinner();
     //
     //spinReel(reel1, firstReelMaxTime, reel1_selectedIndex);
     //setTimeout(function(){  spinReel(reel2, firstReelMaxTime, reel2_selectedIndex);
