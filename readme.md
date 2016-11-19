@@ -1,6 +1,11 @@
 Slot Machine
 
-Your slot machine should have three reels:
+I implemented a slot machine.
+ 
+![ScreenShot](/img/Expresso_Bar_Slot_Machine.png)
+
+
+A slot machine should have three reels:
 
 The first reel has a coffee maker, a teapot, and an espresso machine.
 The second reel has a coffee filter, a tea strainer, and an espresso tamper.
