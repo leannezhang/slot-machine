@@ -1,5 +1,5 @@
 .reel {
-    border: 1px solid black;
+    border: 1px solid #f4d742;
     width: 64px;
     height: 64px;
     float: left;
@@ -8,10 +8,10 @@
     background: url('img/reel1/reel1.jpg') repeat-y;
 }
 .reel-2 {
-    background: url('img/reel1/reel1.jpg') repeat-y;
+    background: url('img/reel2/reel2.jpg') repeat-y;
 }
 .reel-3 {
-    background: url('img/reel1/reel1.jpg') repeat-y;
+    background: url('img/reel3/reel3.jpg') repeat-y;
 }
 .clear {
     clear: both;

@@ -35,7 +35,7 @@ SlotMachine.prototype.start = function() {
     this.results.push(this.thirdReel.randomSelect());
     console.log('Your result is ' + FIRST_ITEMS[this.results[0]] + ', ' +
         SECOND_ITEMS[this.results[1]] + ', ' +
-        THIRD_ITEMS[this.results[1]]);
+        THIRD_ITEMS[this.results[2]]);
 };
 
 SlotMachine.prototype.reset = function() {
@@ -49,7 +49,9 @@ SlotMachine.prototype.declareWinner = function() {
         let luckyIndex = this.results[0];
         resultDiv.textContent = TEXT_CONGRATS + PRIZES[luckyIndex] + '.';
     } else {
-        resultDiv.textContent = TEXT_TRY_AGAIN;
+        resultDiv.textContent = TEXT_TRY_AGAIN ;
+        resultDiv.textContent += ' You result is ' + FIRST_ITEMS[this.results[0]] + ', ' +
+            SECOND_ITEMS[this.results[1]] + ', ' + THIRD_ITEMS[this.results[2]];
     }
 };
 
