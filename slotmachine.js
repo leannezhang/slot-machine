@@ -33,9 +33,6 @@ SlotMachine.prototype.start = function() {
     this.results.push(this.firstReel.randomSelect());
     this.results.push(this.secondReel.randomSelect());
     this.results.push(this.thirdReel.randomSelect());
-    console.log('Your result is ' + FIRST_ITEMS[this.results[0]] + ', ' +
-        SECOND_ITEMS[this.results[1]] + ', ' +
-        THIRD_ITEMS[this.results[2]]);
 };
 
 SlotMachine.prototype.reset = function() {
@@ -51,7 +48,7 @@ SlotMachine.prototype.declareWinner = function() {
     } else {
         resultDiv.textContent = TEXT_TRY_AGAIN ;
         resultDiv.textContent += ' You result is ' + FIRST_ITEMS[this.results[0]] + ', ' +
-            SECOND_ITEMS[this.results[1]] + ', ' + THIRD_ITEMS[this.results[2]];
+            SECOND_ITEMS[this.results[1]] + ', ' + THIRD_ITEMS[this.results[2]] + '.';
     }
 };
 
@@ -73,33 +70,23 @@ SlotMachine.prototype.spinReels = function() {
     let intervalId2 = setInterval((function() {spinMe(reel2,SECOND_MAXSPIN_POS,reel2_selectedIndex)}), delay);
     let intervalId3 = setInterval((function() {spinMe(reel3,THIRD_MAXSPIN_POS,reel3_selectedIndex)}), delay);
 
-    console.log('start');
-    console.log(intervalId);
-    console.log(intervalId2);
-    console.log(intervalId3);
-
     let reels = 0;
     let that = this;
 
     function spinMe(reel, maxSpinTime, selectedIndex) {
         if ((pos * -1) >= maxSpinTime) {
-            console.log('stop');
             let stopPosition = (maxSpinTime + (selectedIndex * REEL_HEIGHT)) * -1;
             reel.style.backgroundPositionY = stopPosition + 'px';
-            console.log(reel);
-            console.log(stopPosition);
 
             // stop the first reel
             if (reels === 1) {
                 clearInterval(intervalId);
-                console.log('stop interval 1: ' + intervalId);
                 intervalId = null;
             };
 
             // next, stop the second reel
             if (intervalId === null && reels === 2) {
                 clearInterval(intervalId2);
-                console.log('stop interval 2: ' + intervalId2);
                 intervalId2 = null;
             };
 
@@ -107,7 +94,6 @@ SlotMachine.prototype.spinReels = function() {
             // declare winner
             // enable button
             if (intervalId2 === null && reels === 3) {
-                console.log('stop interval 3: ' + intervalId3);
                 clearInterval(intervalId3);
                 intervalId3 = null;
                 that.declareWinner();
@@ -131,17 +117,17 @@ function handleClick() {
     slotMachine.reset();
     slotMachine.start();
     slotMachine.spinReels();
-}
+};
 
 // Helper functions
 function sameValues(array) {
     return (new Set(array)).size === 1;
-}
+};
 
 function disableButton() {
     document.querySelector(".play-button").disabled = true;
-}
+};
 
 function enableButton() {
     document.querySelector(".play-button").disabled = false;
-}
+};

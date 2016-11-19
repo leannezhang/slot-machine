@@ -1,5 +1,12 @@
+.slot-machine {
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 222px;
+    height: 80px;
+    background-color: lightyellow
+}
 .reel {
-    border: 1px solid #f4d742;
+    border: 5px solid lightyellow;
     width: 64px;
     height: 64px;
     float: left;
@@ -16,7 +23,26 @@
 .clear {
     clear: both;
 }
+.play-button {
+    width: 222px;
+    margin-left: 50px;
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
 
 .result {
+    font-family: "Helvetica","Arial",sans-serif;
+    color: black;
+    font-size: 12px;
     background-color: lightyellow;
+    width: 222px;
+    margin-left: 50px;
+    text-align: center;
+    height: 45px;
 }
